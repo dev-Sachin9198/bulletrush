@@ -1,33 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rambo Games</title>
-    <style>
-
-body{
-text-align:center;
-font-family:sans-serif;
-}
-
-canvas{
-border:2px solid black;
-background:#eee;
-}
-
-#startBtn{
-padding:10px 20px;
-font-size:18px;
-margin-top:10px;
-}
-
-</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+<title>Rambo Game</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <canvas style="border: 2px solid black;" id="game"></canvas>
-    <br>
-  <button onclick="startGame()">START GAME</button>
-    <script src="game.js" defer></script>
+<div id="wrap">
+  <canvas id="game"></canvas>
+  <div id="pad">
+    <button data-k="KeyW" style="left:16%;bottom:27%">▲</button><button data-k="KeyS" style="left:16%;bottom:3%">▼</button>
+    <button data-k="KeyA" style="left:2%;bottom:15%">◀</button><button data-k="KeyD" style="left:30%;bottom:15%">▶</button>
+    <button data-k="Space" style="right:3%;bottom:8%;width:20%">FIRE</button><button data-k="KeyR" style="right:25%;bottom:22%;width:11%;font-size:12px">R</button>
+  </div>
+  <div id="ov"><h1 id="t">RAMBO</h1><p id="d">WASD / arrows to move, mouse to aim, Space or click to fire, R to reload, P to pause, M to mute.</p><button id="btn">Start game</button></div>
+</div>
+<script src="game.js"></script>
 </body>
 </html>
